@@ -307,12 +307,81 @@ for i in range(0,101,2):
     print(i)
 '''
 
+# Print numbers from 1 - 100 using For loop
+'''
+for i in range(1,101):
+    print(i)
+'''
 
+#Print numbers from 100 - 1 using for loop
+'''
+for i in range(1,101):
+    print(101-i)
+'''
+'''
+for i in range(100,0,-1):
+    print(i)
+'''
 
+# Print the multiplication table of a number n
+'''
+num = int(input("Enter your number:"))
 
+for i in range(1,11):
+    print(num*i)
+'''
 
+# Using pass for skipping loops
+'''
+for i in range(5):
+    pass
 
+print("The loop have been successfully passed...")
+'''
 
+# WAP to find the sum of first n numbers using while loop
+'''
+num = int(input("Enter your number:"))
+sum = 0
+i = 0
+while i <= num:
+    sum += i
+    i += 1
+print(sum)
+'''
+'''
+# CLAUDE AI GENERATED
+num = int(input("Enter a non-negative number: "))
 
+if num < 0:
+    print("Please enter a non-negative number.")
+else:
+    i = 0
+    while i <= num:
+        print(f"Sum of first {i} natural numbers: {(i * (i + 1)) // 2}")
+        i += 1
+'''
+
+# WAP to find the factorial of first N natural numbers using For.
+'''
+num = int(input("Enter a number:"))
+factorial = 1
+for i in range(num,1,-1):
+    factorial *= i
+print(factorial)
+'''
+
+'''
+# Using WHILE loop
+
+num = int(input("Enter a number:"))
+factorial = 1
+i = 1
+while i <= num:
+    factorial *= i
+    i += 1
+
+print("Factorial of Number:", factorial)
+'''
 
 
