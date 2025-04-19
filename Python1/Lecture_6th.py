@@ -144,10 +144,97 @@ def check_num(number):
     if((number % 2) == 0):
         print("EVEN")
     else: print("ODD")
-
+'''
 l = int(input("Enter your number:"))
 check_num(l)
+'''
 
+
+# <<<--------------------------Recursion--------------------------->>>
+
+# WAF to print numbers 5 to 1 using recursion
+'''
+def show(n):
+    if( n == 0): # Base case or stopping condition
+        return
+    print(n)
+    show(n-1) # This calls back the loop
+
+show(5)  # n=5, n-1=4, n-1=3, n-1=2, n-1=1
+'''
+
+# WAF to print 5 to 1 alternating with END using Recursion
+'''
+def show(n):
+    if( n == 0): 
+        return
+    print(n)
+    print("END")
+    show(n-1) # It ends the loop syntax and reiterates the loop again
+
+show(5)
+'''
+
+# WAF to print 3 to 1 and then 3 times END using Recursion
+'''
+def show(n):
+    if( n == 0): 
+        return
+    print(n)
+    show(n-1) 
+    print("END")
+
+show(3)
+'''
+# WAF to find the factorial
+'''
+def fact(n):
+    if( n == 0 or n == 1 ):
+        return 1
+    elif( n < 0):
+        return "Please enter Positive number..."
+    else: 
+        return n * fact(n-1)
+
+print(fact(0))
+'''
+'''
+def fact(n):
+    if( n == 0 or n == 1 ):
+        return 1
+    elif( n < 0 ):
+        return "Please enter Positive number..."
+    return fact(n-1) * n
+
+N = int(input("Enter the number:"))
+print(fact(N))
+'''
+# Write a recursive function to calculate the sum of first N natural numbers
+'''
+def calc_sum(n):
+    if (n == 0):
+        return 0
+    elif( n < 0 ):
+        return "Please enter Positive number..."
+    return calc_sum(n-1) + n
+
+print(calc_sum(0))
+'''
+
+# Write a recursive function to print all elements in a list(HINT: Use list and index as parameters) 
+
+nums = [1,5,9,7,3,6,4,8,2]
+cities = ["Patna","Delhi","mumbai","noida","bilai","Raipur"]
+heros = ["Ironman","Thor","Hulk","Batman","Black Panther","Captain America"]
+
+def print_list(list, index=0):
+    if(index == len(list)):
+        return
+    print(list [index])
+    print_list(list, index + 1)
+
+print_list(cities)
+print_list(heros)
 
 
 
