@@ -202,7 +202,7 @@ car1.start()
 
 # Create Account class with two attributes - Balance & Account number
 # Add 3 methods to debit, credit and print balance
-
+'''
 class Account:
     def __init__(self, balance, Acc_num):
         self.bal = balance
@@ -228,3 +228,4 @@ acc1.debit(1000)
 acc1.credit(500)
 acc1.credit(50000)
 acc1.debit(10000)
+'''
