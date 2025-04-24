@@ -157,6 +157,7 @@ s2.get_avg()
 #<<<----------------------------Static Method------------------------------->>>
 
 # create a method to greet students with "hello"
+'''
 class Student:
     college_name = "RCET R1"
     @staticmethod # decorator
@@ -173,20 +174,39 @@ class Student:
 s1 = Student("Rishikesh")
 s1.hello()
 s1.welcome()
+'''
 
+#<<<----------------------------Pillers of OOP's Programming--------------------c---------->>>
 
+# ABSTRACTION: Hiding the implementation details of a class and only showing the essential features to the user.
 
+# ENCAPSULATION: Wrapping data and functions into a single unit (object) 
 
+'''
+class Car:
+    def __init__(self):
+        self.acc = False
+        self.brk = False
+        self.clutch = False
 
+    def start(self):
+        self.cluth = True
+        self.acc = True
+        print("Car Started...")
 
+car1 = Car()
+car1.start()
+'''
 
+#<<-------------------------------Let's Practice---------------------------------->>
 
+# Create Account class with two attributes - Balance & Account number
 
+class Account:
+    def __init__(self, balance, Acc_num):
+        self.bal = balance
+        self.acc = Acc_num
 
-
-
-
-
-
-
-
+acc1 = Account(8700, 335566)
+print(acc1.bal)
+print(acc1.acc)
