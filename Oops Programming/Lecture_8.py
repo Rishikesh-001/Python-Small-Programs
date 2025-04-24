@@ -201,12 +201,30 @@ car1.start()
 #<<-------------------------------Let's Practice---------------------------------->>
 
 # Create Account class with two attributes - Balance & Account number
+# Add 3 methods to debit, credit and print balance
 
 class Account:
     def __init__(self, balance, Acc_num):
         self.bal = balance
         self.acc = Acc_num
 
-acc1 = Account(8700, 335566)
-print(acc1.bal)
-print(acc1.acc)
+    #debit method
+    def debit(self,amount):
+        self.bal -= amount
+        print("Rs.", amount, "was debited.")
+        print("total balance =", self.get_balance())
+
+    #credit method
+    def credit(self,amount):
+        self.bal += amount
+        print("Rs.", amount, "was credited.")
+        print("total balance =", self.get_balance())
+
+    def get_balance(self):
+        return self.bal
+    
+acc1 = Account(10000, 335566)
+acc1.debit(1000)
+acc1.credit(500)
+acc1.credit(50000)
+acc1.debit(10000)
