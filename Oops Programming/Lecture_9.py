@@ -136,7 +136,7 @@ print(c1.varA)
 '''
 
 # Super method for calling Constructors...
-
+'''
 class Car:
     def __init__(self, type):
         self.type = type
@@ -157,11 +157,64 @@ class ToyotaCar(Car):
 
 car1 = ToyotaCar("Camry","Electric")
 print(car1.type)
+'''
 
+# Class Method: A class method is bound to the class & receives the class as an implicit first arguement
+#Note: Static method can't access or modify class state and generally for utility
+'''
+class Person:
+    name = "anonymous"
 
+    def change_name(self,name):
+        self.name = name
 
+p1 = Person()
+p1.change_name("Khushi Mahato")
+print(p1.name)
+print(Person.name)
+'''
+# or
+'''
+class Person:
+    name = "anonymous"
 
+    def change_name(self,name):
+        Person.name = name
 
+p1 = Person()
+p1.change_name("Khushi Mahato")
+print(p1.name)
+print(Person.name)
+'''
+# or
+'''
+class Person:
+    name = "anonymous"
+
+    def change_name(self,name):
+        self.__class__.name = "Khushi"
+
+p1 = Person()
+p1.change_name("Khushi Mahato")
+print(p1.name)
+print(Person.name)
+'''
+# class method
+
+class Person:
+    name = "anonymous"
+
+    # def change_name(self,name):
+    #     self.__class__.name = "Khushi"
+
+    @classmethod
+    def change_name(cls, name):
+        cls.name = name
+
+p1 = Person()
+p1.change_name("Khushi Mahato")
+print(p1.name)
+print(Person.name)
 
 
 
