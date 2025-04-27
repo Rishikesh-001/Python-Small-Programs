@@ -43,6 +43,7 @@ print(p1.welcome())
 
 # Inheritace in classes: When one class (child/derived) derives the properties & methods of another class(parent/base)
 
+'''
 class Car:
     color = "violet"
     @staticmethod
@@ -64,4 +65,82 @@ print(car1.name)
 print(car1.start())
 print(car1.stop())
 print(car1.color)
+'''
+
+# TYPES OF INHERITANCE - Single Level Inheritance
+
+'''
+class Car:
+    color = "violet"
+    @staticmethod
+    def start():
+        print("Car started.")
+
+    @staticmethod
+    def stop():
+        print("Car stopped.")
+
+class ToyotaCar(Car):
+    def __init__(self, name):
+        self.name = name
+
+car1 = ToyotaCar("Fotuner")
+car2 = ToyotaCar("Camry")
+
+print(car1.name)
+print(car1.start())
+print(car1.stop())
+print(car1.color)
+'''
+
+# TYPES OF INHERITANCE - Multi Level Inheritance
+
+'''
+class Car:
+    @staticmethod
+    def start():
+        print("Car started.")
+
+    @staticmethod
+    def stop():
+        print("Car stopped.")
+
+class ToyotaCar(Car):
+    def __init__(self, name):
+        self.name = name
+
+class Fortuner(ToyotaCar):
+    def __init__(self, type):
+        self.type = type
+
+car1 = Fortuner("Diesel")
+print(car1.start())
+'''
+
+# TYPES OF INHERITANCE - Multiple Inheritance
+
+class A:
+    varA = "welcome to class A"
+
+class B:
+    varB = "welcome to class B"
+
+class C(A,B):
+    varC = "welcome to class C"
+
+c1 = C()
+
+print(c1.varC)
+print(c1.varB)
+print(c1.varA)
+
+
+
+
+
+
+
+
+
+
 
