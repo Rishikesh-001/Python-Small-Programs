@@ -222,7 +222,7 @@ print(calc_sum(0))
 '''
 
 # Write a recursive function to print all elements in a list(HINT: Use list and index as parameters) 
-
+'''
 nums = [1,5,9,7,3,6,4,8,2]
 cities = ["Patna","Delhi","mumbai","noida","bilai","Raipur"]
 heros = ["Ironman","Thor","Hulk","Batman","Black Panther","Captain America"]
@@ -235,8 +235,7 @@ def print_list(list, index=0):
 
 print_list(cities)
 print_list(heros)
-
-
+'''
 
 
 

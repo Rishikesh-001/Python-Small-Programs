@@ -171,6 +171,7 @@ with open("Python3\\Numbers.txt","r") as f:
 print(count)
 '''
 # From a file containing numbers seperated by comma, print all of the numbers...
+'''
 with open("Python3\\Numbers.txt","r") as f:
     data = f.read()
 
@@ -181,5 +182,5 @@ with open("Python3\\Numbers.txt","r") as f:
             num = ""
         else:
             num += data[i]
-
+'''
 
