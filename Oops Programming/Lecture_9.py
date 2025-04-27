@@ -118,7 +118,7 @@ print(car1.start())
 '''
 
 # TYPES OF INHERITANCE - Multiple Inheritance
-
+'''
 class A:
     varA = "welcome to class A"
 
@@ -133,6 +133,31 @@ c1 = C()
 print(c1.varC)
 print(c1.varB)
 print(c1.varA)
+'''
+
+# Super method for calling Constructors...
+
+class Car:
+    def __init__(self, type):
+        self.type = type
+
+    @staticmethod
+    def start():
+        print("Car started.")
+
+    @staticmethod
+    def stop():
+        print("Car stopped.")
+
+class ToyotaCar(Car):
+    def __init__(self, name, type):
+        super().__init__(type)
+        super().start()
+        self.name = name
+
+car1 = ToyotaCar("Camry","Electric")
+print(car1.type)
+
 
 
 
