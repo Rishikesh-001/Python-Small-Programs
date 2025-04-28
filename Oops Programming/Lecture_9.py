@@ -237,7 +237,7 @@ print(stu1.percentage) # Percentage is still the same (Problem)
 '''
 
 # Using Property decorator
-
+'''
 class Student:
     def __init__(self, phy, chem, maths):
         self.phy = phy
@@ -253,4 +253,94 @@ print(stu1.percentage)
 
 stu1.phy = 86 # Updating value of physics
 print(stu1.percentage) 
+'''
+
+
+#<<<----------------------------------------POLYMORPHISM------------------------------------------>>>
+
+# Polymorphism: Operator Overloading
+# When the same operator is allowed to have different meaning according to the context
+
+# for examople:
+'''
+print(1 + 2) #3
+print(type(1))
+
+print("apna" + "college") #apnacollege
+print(type("apna"))
+
+print([1,2,3] + [4,5,6]) #[1,2,3,4,5,6]
+print(type([1,2,3]))
+'''
+# Create a class for complex numbers
+'''
+class Complex:
+    def __init__(self, real, img):
+        self.real = real
+        self.img = img
+
+    def showNumber(self):
+        print(self.real, "i +", self.img,"j")
+
+num1 = Complex(1,2)
+num1.showNumber()
+
+num2 = Complex(4,6)
+num2.showNumber()
+'''
+# Create an addition logic for Complex numbers
+'''
+class Complex:
+    def __init__(self, real, img):
+        self.real = real
+        self.img = img
+
+    def showNumber(self):
+        print(self.real, "i +", self.img,"j")
+
+    def add(self, num2):
+        newreal = self.real + num2.real
+        newImg = self.img + num2.img
+        return Complex(newreal, newImg)
+
+
+num1 = Complex(1,2)
+num1.showNumber()
+
+num2 = Complex(4,6)
+num2.showNumber()
+
+num3 = num1.add(num2)
+num3.showNumber()
+
+# num3 = num1 + num2  # Error for Unsupported Operand type
+# num3.showNumber() 
+'''
+
+# Solving the error with Dunder function, Dunder function is nothing but when we add double underscores before the operators, it becomes dunder function...
+
+class Complex:
+    def __init__(self, real, img):
+        self.real = real
+        self.img = img
+
+    def showNumber(self):
+        print(self.real, "i +", self.img,"j")
+
+    def __add__(self, num2): # converted add to dunder function
+        newreal = self.real + num2.real
+        newImg = self.img + num2.img
+        return Complex(newreal, newImg)
+
+
+num1 = Complex(1,2)
+num1.showNumber()
+
+num2 = Complex(4,6)
+num2.showNumber()
+
+num3 = num1 + num2
+num3.showNumber()
+
+
 
