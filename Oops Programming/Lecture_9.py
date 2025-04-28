@@ -372,7 +372,7 @@ num3.showNumber()
 #<<<<===---------------------------------Practice Questions----------------------------------===>>>>
 
 # Define a circle class to create a circle with radius "r" using the constructor. Define Area() method of the class which calculates the Area of the circle. Define a Perimeter method of the class which allows you to calculate the perimeter of the circle.
-
+'''
 class Circle:
     def __init__(self, radius):
         self.radius = radius
@@ -388,17 +388,59 @@ print(radius1.radius)
 
 print(radius1.area())
 print(radius1.perimeter())
+'''
+
+# Define a employee class with attributes role, department & salary. This class also have a ShowDetails() method
+'''
+class Employee:
+    def __init__(self, role, department, salary):
+        self.role = role
+        self.department = department
+        self.salary = salary
+
+    def showDetails(self):
+        print("Role =", self.role)
+        print("Department =", self.department)
+        print("Salary =", self.salary)
 
 
+emp1 = Employee("Data Engineer", "Security", "$10000")
+emp2 = Employee("Accountant", "Finance", "$8000")
+
+emp1.showDetails()
+emp2.showDetails()
+
+# print(emp1.role)
+# print(emp1.department)
+# print(emp1.salary)
+'''
+# Create an Engineer class that Inherits it properties from Employee & has additional attributes: name & age
 
 
+class Employee:
+    def __init__(self, role, department, salary):
+        self.role = role
+        self.department = department
+        self.salary = salary
 
+    def showDetails(self):
+        print("Role =", self.role)
+        print("Department =", self.department)
+        print("Salary =", self.salary)
 
+class Engineer(Employee):
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        super().__init__("Data Analyst","Data Science", "$8800")
 
+emp1 = Employee("Data Engineer", "Security", "$10000")
+emp2 = Employee("Accountant", "Finance", "$8000")
 
-
-
-
+e1 = Engineer("Khushi Mahato", 22)
+print(e1.name)
+print(e1.age)
+e1.showDetails()
 
 
 
