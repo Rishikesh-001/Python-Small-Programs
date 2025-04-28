@@ -200,7 +200,7 @@ print(p1.name)
 print(Person.name)
 '''
 # class method
-
+'''
 class Person:
     name = "anonymous"
 
@@ -215,10 +215,42 @@ p1 = Person()
 p1.change_name("Khushi Mahato")
 print(p1.name)
 print(Person.name)
+'''
 
+# Property decorator
 
+# Write a program to display the percentage of marks of the student
+'''
+class Student:
+    def __init__(self, phy, chem, maths):
+        self.phy = phy
+        self.chem = chem
+        self.maths = maths
+        self.percentage = str((self.phy + self.chem + self.maths) / 3) + "%"
 
+stu1 = Student(97,98,99)
+print(stu1.percentage)
 
+stu1.phy = 86 # Updating value of physics
+print(stu1.phy)
+print(stu1.percentage) # Percentage is still the same (Problem)
+'''
 
+# Using Property decorator
 
+class Student:
+    def __init__(self, phy, chem, maths):
+        self.phy = phy
+        self.chem = chem
+        self.maths = maths
+
+    @property
+    def percentage(self):
+        return str((self.phy + self.chem + self.maths) / 3) + "%"
+
+stu1 = Student(97,98,99)
+print(stu1.percentage)
+
+stu1.phy = 86 # Updating value of physics
+print(stu1.percentage) 
 
