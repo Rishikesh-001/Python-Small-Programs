@@ -416,7 +416,7 @@ emp2.showDetails()
 '''
 # Create an Engineer class that Inherits it properties from Employee & has additional attributes: name & age
 
-
+'''
 class Employee:
     def __init__(self, role, department, salary):
         self.role = role
@@ -441,6 +441,23 @@ e1 = Engineer("Khushi Mahato", 22)
 print(e1.name)
 print(e1.age)
 e1.showDetails()
+'''
+
+# Create a class Order which stores Items & its price. Use Dunder function __gt__() to convey that: order1 > order2 if Price of Order1> Price of Order2
+
+class Order:
+    def __init__(self, items, price):
+        self.item = items
+        self.price = price
+
+    def __gt__(self, odr2):
+        return self.price > odr2.price
+
+odr1 = Order("chips", 20)
+odr2 = Order("Tea", 15)
+
+print(odr1 > odr2)
+
 
 
 
