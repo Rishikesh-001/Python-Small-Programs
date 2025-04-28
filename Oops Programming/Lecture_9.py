@@ -344,7 +344,7 @@ num3.showNumber()
 '''
 
 # Create a python logic to subtract two Complex Numbers
-
+'''
 class Complex:
     def __init__(self, real, img):
         self.real = real
@@ -367,3 +367,47 @@ num2.showNumber()
 
 num3 = num1 - num2
 num3.showNumber()
+'''
+
+#<<<<===---------------------------------Practice Questions----------------------------------===>>>>
+
+# Define a circle class to create a circle with radius "r" using the constructor. Define Area() method of the class which calculates the Area of the circle. Define a Perimeter method of the class which allows you to calculate the perimeter of the circle.
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return (22/7) * self.radius * self.radius
+    
+    def perimeter(self):
+        return 2 * (22/7) * self.radius
+        
+radius1 = Circle(21)
+print(radius1.radius)
+
+print(radius1.area())
+print(radius1.perimeter())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
