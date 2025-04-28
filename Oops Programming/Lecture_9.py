@@ -318,7 +318,7 @@ num3.showNumber()
 '''
 
 # Solving the error with Dunder function, Dunder function is nothing but when we add double underscores before the operators, it becomes dunder function...
-
+'''
 class Complex:
     def __init__(self, real, img):
         self.real = real
@@ -341,6 +341,29 @@ num2.showNumber()
 
 num3 = num1 + num2
 num3.showNumber()
+'''
+
+# Create a python logic to subtract two Complex Numbers
+
+class Complex:
+    def __init__(self, real, img):
+        self.real = real
+        self.img = img
+
+    def showNumber(self):
+        print(self.real, "i +", self.img,"j")
+
+    def __sub__(self, num2): # converted add to dunder function
+        newreal = self.real - num2.real
+        newImg = self.img - num2.img
+        return Complex(newreal, newImg)
 
 
+num1 = Complex(1,2)
+num1.showNumber()
 
+num2 = Complex(4,6)
+num2.showNumber()
+
+num3 = num1 - num2
+num3.showNumber()
