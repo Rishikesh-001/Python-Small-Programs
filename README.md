@@ -110,7 +110,7 @@ python filename.py
 - All code is beginner-friendly and written with clarity in mind.
 - No external libraries required—standard Python only.
 
-## 🤝 Contributing
+## 🤝 Contributions
 
 Feel free to fork and contribute by adding your own examples, improving explanations, or suggesting enhancements!
 
