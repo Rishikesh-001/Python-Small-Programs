@@ -53,6 +53,37 @@ Each folder or file corresponds to one lecture in the series. Below is a breakdo
 
 ## 📁 Repository Structure
 
+```
+📁 Python Small Programs/
+ ┣ 📁 .vscode
+    ┣ 📁 ..
+    ┗ 📄 Launch.json
+ ┣ 📁 OOPs Programming
+    ┣ 📄 Lecture 8
+    ┗ 📄 Lecture 9
+ ┣ 📁 Python 1
+    ┣ 📁 ..
+    ┣ 📄 Lecture 1
+    ┣ 📄 Lecture 2
+    ┣ 📄 Lecture 3
+    ┣ 📄 Lecture 4
+    ┣ 📄 Lecture 5
+    ┗ 📄 Lecture 6
+ ┣ 📁 Python 2
+    ┣ 📁 ..
+    ┣ 📄 Lecture 1
+    ┣ 📄 Lecture 2
+    ┣ 📄 Lecture 3
+    ┣ 📄 Lecture 4
+    ┗ 📄 Lecture 5
+ ┣ 📁 Python 3
+    ┣ 📁 ..
+    ┣ 📄 Lecture 7
+    ┣ 📄 Numbers.txt
+    ┣ 📄 Practice.txt
+    ┗ 📄 Demo.txt
+ ┗ 📄 Readme.md
+```
 Each lecture is saved with organized and readable code for easy navigation. You'll find:
 
 - Program examples discussed in the lecture  
